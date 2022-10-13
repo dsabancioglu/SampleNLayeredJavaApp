@@ -20,7 +20,7 @@ public class CategoryManager {
     public void add(Category category) throws Exception{
 
         for (Category category1 : this.categories){
-            if(category1 == category){
+            if(category1.getName().equals(category.getName())){
                 throw new Exception("Bu kategori zaten sistemde kayıtlıdır.");
             }
         }

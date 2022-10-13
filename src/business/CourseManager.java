@@ -21,7 +21,7 @@ public class CourseManager {
     public void add(Course course) throws Exception{
         if(course.getPrice() >= 0) {
             for (Course course1 : this.courses) {
-                if(course1 == course) {
+                if(course1.getName().equals(course.getName())) {
                     throw new Exception("Bu kurs adı sistemde kayıtlıdır.");
                 }
             }

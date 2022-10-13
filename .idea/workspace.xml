@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29c30194-69ba-4ea0-b8cb-060705442b77" name="Changes" comment="Logger added">
-      <change afterPath="$PROJECT_DIR$/src/core/logging/ConsoleLogger.java" afterDir="false" />
+    <list default="true" id="29c30194-69ba-4ea0-b8cb-060705442b77" name="Changes" comment="project completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/business/CategoryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/business/CategoryManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/business/CourseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/business/CourseManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/business/InstructorManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/business/InstructorManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataAccess/ICategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataAccess/ICategoryDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataAccess/hibernate/HibernateCategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataAccess/hibernate/HibernateCategoryDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataAccess/jdbc/JdbcCategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataAccess/jdbc/JdbcCategoryDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataAccess/jdbc/JdbcCourseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataAccess/jdbc/JdbcCourseDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataAccess/jdbc/JdbcInstructorDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataAccess/jdbc/JdbcInstructorDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Category.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/base/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/base/BaseEntity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +68,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665639696118</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Logger added">
+      <created>1665640146052</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1665640146052</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -95,6 +92,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="fc" />
     <MESSAGE value="Logger added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Logger added" />
+    <MESSAGE value="project completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="project completed" />
   </component>
 </project>
