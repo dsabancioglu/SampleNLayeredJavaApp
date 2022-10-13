@@ -7,8 +7,9 @@ import java.util.List;
 
 public class HibernateCourseDao implements ICourseDao {
     private List<Course> courses;
+
     public HibernateCourseDao(){
-        this.setCourses(new ArrayList<Course>());
+        this.setCourses(new ArrayList<>());
     }
 
     public List<Course> getCourses() {
