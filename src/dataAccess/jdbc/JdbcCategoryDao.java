@@ -17,11 +17,9 @@ public class JdbcCategoryDao implements ICategoryDao {
         this.categories.add(category);
         System.out.println("Kategoriler Jdbc ile db'e eklendi "+ category.getName());
     }
-
     public List<Category> getCategories() {
         return categories;
     }
-
     public void setCategories(List<Category> categories) {
         this.categories = categories;
     }

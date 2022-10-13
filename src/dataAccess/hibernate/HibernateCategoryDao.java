@@ -15,16 +15,12 @@ public class HibernateCategoryDao implements ICategoryDao {
     public List<Category> getCategories() {
         return categories;
     }
-
     public void setCategories(List<Category> categories) {
         this.categories = categories;
     }
-
     @Override
     public void add(Category category) {
         this.categories.add(category);
         System.out.println("Kategoriler Hibernate ile db'e eklendi " + category.getName());
     }
-
-
 }

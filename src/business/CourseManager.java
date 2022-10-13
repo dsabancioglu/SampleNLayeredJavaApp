@@ -1,7 +1,7 @@
 package business;
 
+import core.logging.ILogger;
 import dataAccess.ICourseDao;
-import dataAccess.jdbc.JdbcCourseDao;
 import entities.Course;
 
 import java.util.List;
@@ -9,14 +9,16 @@ import java.util.List;
 public class CourseManager {
     ICourseDao courseDao;
     List<Course> courses;
-    public CourseManager(ICourseDao courseDao, List<Course> courses){
+    List<ILogger> loggers;
+
+    public CourseManager(ICourseDao courseDao, List<Course> courses, List<ILogger> loggers){
         this.courseDao = courseDao ;
         this.courses = courses;
+        this.loggers = loggers;
     }
-    //1-- Kursun fiyatı 0'dan küçük olamaz
-    //2-- Kurs ismi tekrar edemez
+    //Requirement1-- Kursun fiyatı 0'dan küçük olamaz
+    //Requirement2-- Kurs ismi tekrar edemez
     public void add(Course course) throws Exception{
-
         if(course.getPrice() >= 0) {
             for (Course course1 : this.courses) {
                 if(course1 == course) {
@@ -24,7 +26,9 @@ public class CourseManager {
                 }
             }
             this.courseDao.add(course);
-            System.out.println("eklendi");
+            for(ILogger logger: loggers){
+                logger.log("Yeni kurs eklendi: "+ course.getName());
+            }
         }
         else {
             throw new Exception("Kurs fiyatı 0'dan küçük olamaz.");

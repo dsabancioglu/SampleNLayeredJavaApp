@@ -1,20 +1,23 @@
 import business.CategoryManager;
 import business.CourseManager;
 import business.InstructorManager;
+import core.logging.ConsoleLogger;
+import core.logging.DatabaseLogger;
+import core.logging.FileLogger;
+import core.logging.ILogger;
 import dataAccess.ICategoryDao;
 import dataAccess.ICourseDao;
 import dataAccess.IInstructorDao;
 import dataAccess.hibernate.HibernateCategoryDao;
 import dataAccess.hibernate.HibernateCourseDao;
 import dataAccess.hibernate.HibernateInstructorDao;
-import dataAccess.jdbc.JdbcCourseDao;
 import entities.Category;
 import entities.Course;
 import entities.Instructor;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -22,6 +25,13 @@ public class Main {
         ICourseDao courseDao = new HibernateCourseDao();
         IInstructorDao instructorDao = new HibernateInstructorDao();
 
+        //loggers
+        List<ILogger> loggers = new ArrayList<>();
+        loggers.add(new ConsoleLogger());
+        loggers.add(new DatabaseLogger());
+        loggers.add(new FileLogger());
+
+        //database
         List<Category> categories = new ArrayList<>();
         categories.add(new Category("Yazilim"));
         categories.add(new Category("Siyaset"));
@@ -38,17 +48,17 @@ public class Main {
         instructors.add(new Instructor("Mehmet","Yılmaz"));
         instructorDao.setInstructors(instructors);
 
-        //eklenecekler
+        //will be added
         Category category = new Category("Tıp");
         Course course = new Course("C++", 10);
         Instructor instructor = new Instructor("Ayse", "Ak");
 
-        //iş kuralına uyuyorsa ekle
-        CategoryManager categoryManager = new CategoryManager(categoryDao, categories);
+        //add if it fits the business rule, otherwise throws exception
+        CategoryManager categoryManager = new CategoryManager(categoryDao, categories,loggers);
         categoryManager.add(category);
-        InstructorManager instructorManager = new InstructorManager(instructorDao);
+        InstructorManager instructorManager = new InstructorManager(instructorDao,loggers);
         instructorManager.add(instructor);
-        CourseManager courseManager = new CourseManager(courseDao, courses);
+        CourseManager courseManager = new CourseManager(courseDao, courses, loggers);
         courseManager.add(course);
 
     }

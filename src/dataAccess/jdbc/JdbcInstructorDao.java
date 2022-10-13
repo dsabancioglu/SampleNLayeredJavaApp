@@ -13,17 +13,14 @@ public class JdbcInstructorDao implements IInstructorDao {
     public JdbcInstructorDao(){
         this.instructors = new ArrayList<Instructor>();
     }
-
     @Override
     public void add(Instructor instructor) {
         this.instructors.add(instructor);
         System.out.println("Eğitmenler Jdbc ile db'e eklendi ");
     }
-
     public List<Instructor> getInstructors() {
         return instructors;
     }
-
     public void setInstructors(List<Instructor> instructors) {
         this.instructors = instructors;
     }

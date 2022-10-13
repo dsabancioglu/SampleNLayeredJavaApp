@@ -18,11 +18,9 @@ public class JdbcCourseDao implements ICourseDao {
         this.courses.add(course);
         System.out.println("Kurslar Jdbc ile db'e eklendi ");
     }
-
     public List<Course> getCourses() {
         return courses;
     }
-
     public void setCourses(List<Course> courses) {
         this.courses = courses;
     }

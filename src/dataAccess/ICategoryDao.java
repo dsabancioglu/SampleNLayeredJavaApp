@@ -6,7 +6,7 @@ import entities.Instructor;
 import java.util.List;
 
 public interface ICategoryDao {
-    void add(Category category);  //Ben bunu eklicem ama yarın öbür gün başka bir şekilde ekleme yapmak isteyebilirim, o yüzden intrface olarak yazıyorum.
+    void add(Category category);
     List<Category> getCategories();
     void setCategories(List<Category> categories);
 }
