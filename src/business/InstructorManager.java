@@ -14,6 +14,7 @@ public class InstructorManager {
         this.instructorDao = instructorDao;
         this.loggers = loggers;
     }
+
     public void add(Instructor instructor){
         this.instructorDao.add(instructor);
         for (ILogger logger: loggers){

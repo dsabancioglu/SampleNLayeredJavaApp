@@ -16,6 +16,7 @@ public class CategoryManager {
         this.categoryDao = categoryDao;
         this.loggers = loggers;
     }
+
     //Requirment1-- Kategori ismi tekrar edemez
     public void add(Category category) throws Exception{
 
@@ -25,8 +26,10 @@ public class CategoryManager {
             }
         }
         this.categoryDao.add(category);
+
         for(ILogger logger : loggers){
             logger.log("Yeni kategori eklendi: " + category.getName());
         }
+
     }
 }
